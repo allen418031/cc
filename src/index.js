@@ -1,17 +1,51 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Bar from './components/AppBar';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+//import './index.css';
+
+
+
+//import App from './App';
+/*const theme = createTheme({
+
+  palette: {
+
+    primary: {
+
+      main: '#FE8B83',
+
+    },
+
+    secondary: {
+
+      main: '#FE8B83',
+
+    },
+
+  },
+
+});*/
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <React.StrictMode>
+    
+    <Router>
+
+        <Switch>
+
+            <Route path="/" component={Bar}/>
+
+        </Switch>
+
+    </Router>
+  
+  </React.StrictMode>
+
+, document.getElementById('root'));
